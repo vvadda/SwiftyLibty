@@ -7,8 +7,8 @@ env:
     - TEST_SDK=iphonesimulator12.2 OS=12.2 NAME='iPhone 7'
 
 script:
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SwiftyLibty.xcodeproj -scheme SwiftyLibty -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
-
+//- set -o pipefail && xcodebuild test -enableCodeCoverage YES -project SwiftyLibty.xcodeproj -scheme SwiftyLibty -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+- xctool -project {{path_to_xcodeproj}} -scheme {{your_testing_scheme}} xcodebuild test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 
 after_success:
