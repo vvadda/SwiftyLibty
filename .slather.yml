@@ -1,5 +1,5 @@
 coverage_service: cobertura_xml
-xcodeproj: path/to/SwiftyLibty.xcodeproj
+xcodeproj: SwiftyLibty.xcodeproj
 scheme: SwiftyLibty
 output_directory: reports
 ignore:
