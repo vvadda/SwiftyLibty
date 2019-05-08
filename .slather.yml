@@ -1,4 +1,4 @@
-coverage_service: cobertura_xml
+coverage_service: cobertura.xml
 xcodeproj: SwiftyLibty.xcodeproj
 scheme: SwiftyLibty
 output_directory: reports
